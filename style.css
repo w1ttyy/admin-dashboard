@@ -1,3 +1,12 @@
+:root {
+    --color-primary: #1992d4;
+    --color-accent: #f0b429;
+    --color-bg: #e2e8f0;
+    --color-text-muted: #52606d;
+    --shadow-card: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +18,15 @@ body {
     min-height: 100vh;
     grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    font: inherit;
 }
 
 .sidebar {
-    background-color: rgb(74, 168, 255);
+    background-color: var(--color-primary);
     display: grid;
     grid-row: 1/-1;
     grid-column: 1;
@@ -54,10 +68,20 @@ ul {
 }
 
 header {
-    background-color: rgb(173, 248, 173);
+    background-color: white;
     padding: 20px 40px;
     display: grid;
     gap: 40px;
+}
+
+.actions button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .top {
@@ -83,7 +107,7 @@ header {
 }
 
 main {
-    background-color: rgb(250, 182, 182);
+    background-color: var(--color-bg);
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 10px;
@@ -106,13 +130,13 @@ main {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-card);
     display: grid;
     gap: 20px;
 }
 
 .project {
-    border-left: 10px solid rgb(255, 207, 0);
+    border-left: 10px solid var(--color-accent);
     grid-template-rows: auto 1fr auto;
     gap: 5px;
 }
@@ -138,7 +162,7 @@ aside {
 }
 
 .announcement:not(:last-child) {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--color-bg);
     padding-bottom: 20px;
 }
 
@@ -148,4 +172,8 @@ aside {
     border-radius: 50%;
     border: 1px solid black;
     flex-shrink: 0;
+}
+
+.project p, .announcement p {
+    color: var(--color-text-muted);
 }

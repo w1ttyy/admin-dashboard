@@ -12,13 +12,33 @@ body {
 }
 
 .sidebar {
-    background-color: rgb(193, 193, 255);
+    background-color: rgb(74, 168, 255);
+    display: grid;
     grid-row: 1/-1;
     grid-column: 1;
-    display: grid;
     gap: 40px;
     align-content: start;
     padding: 20px;
+    color: White;
+}
+
+.sidebar a {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: inherit;
+
+}
+
+span.icon {
+    height: 24px;
+    width: 24px;
+    border: 2px solid black;
+}
+
+.nav-main, .nav-secondary {
+    display: grid;
+    gap: 12px;
 }
 
 .nav-main {
@@ -35,8 +55,97 @@ ul {
 
 header {
     background-color: rgb(173, 248, 173);
+    padding: 20px 40px;
+    display: grid;
+    gap: 40px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    flex: 1;
+}
+
+.user, .user-welcome, .actions, .trend {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main {
     background-color: rgb(250, 182, 182);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+.projects, .announcements, .trending {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.announcement-list, .trending-list, .project {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    display: grid;
+    gap: 20px;
+}
+
+.project {
+    border-left: 10px solid rgb(255, 207, 0);
+    grid-template-rows: auto 1fr auto;
+    gap: 5px;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.project-actions button {
+    display: flex;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+aside {
+    display: grid;
+    align-content: start;
+    gap: 40px;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: 1px solid black;
+    flex-shrink: 0;
 }

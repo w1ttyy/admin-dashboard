@@ -198,3 +198,56 @@ aside {
 .project p, .announcement p {
     color: var(--color-text-muted);
 }
+
+/* ===== Typography ===== */
+
+body {
+    line-height: 1.4;
+}
+
+.sidebar h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.sidebar a {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+main h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.project h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.announcement h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.announcement p {
+    font-size: 0.875rem;
+}
+
+.side-welcome> :first-child {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.header-user {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.user-name {
+    font-weight: 700;
+}
+
+.trend-info p:last-child {
+    color: var(--color-text-muted);
+}
